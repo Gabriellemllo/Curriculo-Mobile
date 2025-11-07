@@ -1,24 +1,20 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
+import { Tabs } from 'expo-router';
+import { Feather } from '@expo/vector-icons';
 
-import { useColorScheme } from '@/hooks/use-color-scheme';
-
-export const unstable_settings = {
-  anchor: '(tabs)',
-};
-
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-
+export default function Layout() {
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: '#96a5f9',
+        tabBarStyle: { backgroundColor: '#181B20' },
+        headerShown: false,
+      }}
+    >
+      <Tabs.Screen name="index" options={{ title: 'Início', tabBarIcon: ({ color }) => <Feather name="home" size={22} color={color} /> }} />
+      <Tabs.Screen name="sobre" options={{ title: 'Sobre', tabBarIcon: ({ color }) => <Feather name="user" size={22} color={color} /> }} />
+      <Tabs.Screen name="experiencia-academica" options={{ title: 'Acadêmico', tabBarIcon: ({ color }) => <Feather name="book" size={22} color={color} /> }} />
+      <Tabs.Screen name="experiencia-profissional" options={{ title: 'Profissional', tabBarIcon: ({ color }) => <Feather name="briefcase" size={22} color={color} /> }} />
+      <Tabs.Screen name="projetos" options={{ title: 'Projetos', tabBarIcon: ({ color }) => <Feather name="layers" size={22} color={color} /> }} />
+    </Tabs>
   );
 }
