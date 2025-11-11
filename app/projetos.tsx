@@ -3,32 +3,32 @@ import { SafeAreaView, ScrollView, View, Text, Image, TouchableOpacity, useWindo
 import { globalStyles } from '../app/globalStyles';
 
 const data = [
-  {
-    id: 1,
-    title: 'Hackathon Campus Party 2024',
-    subtitle: 'Hackathon Correios',
-    image: require('../assets/images/correios.png'),
-    description: 'Participei do hackathon dos Correios na Campus Party 2024 como Gerente de Projetos, Designer e QA. Criamos a ideia de um totem personalizado para o desafio.',
+  {
+    id: 1,
+    title: 'Projeto Start',
+    subtitle: 'Meu pet',
+    image: require('../assets/images/meupet.png'),
+     description: 'Meu Pet é uma solução tecnológica criada para castrar, mapear e cuidar de animais de rua, promovendo também a adoção responsável. O projeto atua em parceria com ONGs, clínicas veterinárias e empresas locais, ajudando a reduzir o número de animais abandonados e a sobrecarga das organizações de proteção animal, que muitas vezes enfrentam falta de recursos. ',
   },
   {
     id: 2,
-    title: 'Hackathon Curso Start',
-    subtitle: 'Meu Pet',
-    image: require('../assets/images/hackathonstart.png'),
-    description: 'Participei do hackathon de conclusão do curso Start, onde tive uma experiência multifuncional como Gerente de Projetos, Designer e Desenvolvedor. Além de programar e liderar a equipe, o projeto foi crucial para expandir meu conhecimento em design web e programação.',
+    title: 'NasaSpaceApps',
+    subtitle: 'ExoRecife',
+    image: require('../assets/images/exorecife.png'),
+    description: 'ExoRecife é um projeto desenvolvido para o NASA Space Apps Challenge 2024 - Recife, com o objetivo de aproximar estudantes dos mais de 5.500 exoplanetas catalogados no Arquivo de Exoplanetas da NASA. Inspirado na ideia de “viajar o mundo com a palma das mãos”, o projeto propõe uma experiência interativa e prática, tornando o universo mais acessível e estimulando o interesse pela ciência, astronomia e tecnologia.',
   },
   {
-    id: 3,
-    title: 'Nasa Space Apps Challenge 2024',
-    subtitle: 'ExoRecife',
-    image: require('../assets/images/nasaspace.png'),
-    description: 'Participei de um projeto na área de Design, e nosso propósito era criar uma interface para aproximar as pessoas dos exoplanetas. O projeto foi classificado em 4º lugar e tive a oportunidade de disputar o mundial',
-  },
+    id: 3,
+    title: 'Campus Party',
+    subtitle: 'Hackathon Correios',
+    image: require('../assets/images/toten.png'),
+    description: 'Criamos um totem inteligente para os Correios. Ele automatiza o cadastro por voz e a medição dos pacotes. Valida peso e dimensões com sensores e imagem. Agiliza o despacho e melhora o atendimento ao público.',
+  },
 ];
 
-export default function ExperienciaProfissional() {
+export default function Projetos() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
-  const { width: windowWidth } = useWindowDimensions();
+  const { width: windowWidth } = useWindowDimensions();
 
   const CARD_WIDTH = Math.min(windowWidth * 0.9, 450); 
   const CARD_HEIGHT = CARD_WIDTH * 0.66; 
@@ -40,7 +40,7 @@ export default function ExperienciaProfissional() {
   return (
     <SafeAreaView style={globalStyles.safeAreaContainer}>
       <ScrollView contentContainerStyle={globalStyles.scrollContentContainer}>
-        <Text style={[globalStyles.title, { marginBottom: 32 }]}>Experiência{'\n'}Profissional</Text>
+        <Text style={[globalStyles.title, { marginBottom: 32 }]}>Projetos</Text>
         
         {data.map((item) => (
           <View key={item.id} style={[globalStyles.listItemContainer, { width: CARD_WIDTH }]}>

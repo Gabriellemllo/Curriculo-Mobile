@@ -1,5 +1,5 @@
 import { Tabs } from 'expo-router';
-import { Feather } from '@expo/vector-icons';
+import { Home, User, GraduationCap, Briefcase, Code } from 'lucide-react-native';
 
 export default function Layout() {
   return (
@@ -10,11 +10,41 @@ export default function Layout() {
         headerShown: false,
       }}
     >
-      <Tabs.Screen name="index" options={{ title: 'Início', tabBarIcon: ({ color }) => <Feather name="home" size={22} color={color} /> }} />
-      <Tabs.Screen name="sobre" options={{ title: 'Sobre', tabBarIcon: ({ color }) => <Feather name="user" size={22} color={color} /> }} />
-      <Tabs.Screen name="experiencia-academica" options={{ title: 'Acadêmico', tabBarIcon: ({ color }) => <Feather name="book" size={22} color={color} /> }} />
-      <Tabs.Screen name="experiencia-profissional" options={{ title: 'Profissional', tabBarIcon: ({ color }) => <Feather name="briefcase" size={22} color={color} /> }} />
-      <Tabs.Screen name="projetos" options={{ title: 'Projetos', tabBarIcon: ({ color }) => <Feather name="layers" size={22} color={color} /> }} />
+      <Tabs.Screen 
+        name="index" 
+        options={{ 
+          title: 'Início', 
+          tabBarIcon: ({ color, size }) => <Home color={color} size={size} /> 
+        }} 
+      />
+      <Tabs.Screen 
+        name="sobre" 
+        options={{ 
+          title: 'Sobre', 
+          tabBarIcon: ({ color, size }) => <User color={color} size={size} /> 
+        }} 
+      />
+      <Tabs.Screen 
+        name="experiencia_academica" 
+        options={{ 
+          title: 'Acadêmico', 
+          tabBarIcon: ({ color, size }) => <GraduationCap color={color} size={size} /> 
+        }} 
+      />
+      <Tabs.Screen 
+        name="experiencia_profissional" 
+        options={{ 
+          title: 'Profissional', 
+          tabBarIcon: ({ color, size }) => <Briefcase color={color} size={size} /> 
+        }} 
+      />
+      <Tabs.Screen 
+        name="projetos" 
+        options={{ 
+          title: 'Projetos', 
+          tabBarIcon: ({ color, size }) => <Code color={color} size={size} /> 
+        }} 
+      />
     </Tabs>
   );
 }
