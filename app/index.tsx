@@ -1,5 +1,5 @@
 import { SafeAreaView, ScrollView, View, Text, Image, TouchableOpacity, Linking } from 'react-native';
-import { globalStyles } from './globalStyles';
+import { globalStyles } from '../components/globalStyles';
 
 export default function HomeScreen() {
   

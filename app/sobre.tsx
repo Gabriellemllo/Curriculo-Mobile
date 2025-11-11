@@ -1,5 +1,5 @@
 import { SafeAreaView, ScrollView, View, Text, Image } from 'react-native';
-import { globalStyles } from './globalStyles';
+import { globalStyles } from '../components/globalStyles';
 
 export default function SobreScreen() {
   return (

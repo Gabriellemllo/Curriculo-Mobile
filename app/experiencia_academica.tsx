@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { SafeAreaView, ScrollView, View, Text, Image, TouchableOpacity, useWindowDimensions } from 'react-native'; 
-import { globalStyles } from './globalStyles';
+import { globalStyles } from '../components/globalStyles';
 
 const data = [
   {
